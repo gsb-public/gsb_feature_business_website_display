@@ -15,7 +15,7 @@ function gsb_feature_business_website_display_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'taxonomy_term_data';
-  $view->human_name = 'Selected Business Websites Category Listing';
+  $view->human_name = 'GSB Business Websites Category Listing';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -70,7 +70,7 @@ function gsb_feature_business_website_display_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = ' Selected Business Websites Category Detail';
+  $view->human_name = 'GSB Business Websites Category Detail';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
