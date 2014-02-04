@@ -48,7 +48,7 @@ function gsb_feature_business_website_display_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'library/conduct-research/online-resources/business-websites/test/[name_1] ';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'library/conduct-research/online-resources/business-websites/[name_1] ';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
@@ -62,7 +62,7 @@ function gsb_feature_business_website_display_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'library/conduct-research/online-resources/business-websites/test';
+  $handler->display->display_options['path'] = 'library/conduct-research/online-resources/business-websites';
   $export['business_website_category_listing'] = $view;
 
   $view = new view();
@@ -87,13 +87,25 @@ function gsb_feature_business_website_display_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Field: Link */
+  $handler->display->display_options['fields']['field_link_single']['id'] = 'field_link_single';
+  $handler->display->display_options['fields']['field_link_single']['table'] = 'field_data_field_link_single';
+  $handler->display->display_options['fields']['field_link_single']['field'] = 'field_link_single';
+  $handler->display->display_options['fields']['field_link_single']['label'] = '';
+  $handler->display->display_options['fields']['field_link_single']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link_single']['alter']['text'] = '<a href=" [field_link_single]" target="_blank">[title]</a>';
+  $handler->display->display_options['fields']['field_link_single']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_link_single']['alter']['absolute'] = TRUE;
+  $handler->display->display_options['fields']['field_link_single']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link_single']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_link_single']['type'] = 'link_plain';
+  $handler->display->display_options['fields']['field_link_single']['settings'] = array(
+    'conditions' => array(
+      0 => array(
+        'condition' => '',
+      ),
+    ),
+  );
   /* Field: Field: Description */
   $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
   $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
@@ -107,6 +119,15 @@ function gsb_feature_business_website_display_views_default_views() {
       ),
     ),
   );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<a href="[field_link_single]" target=\'_blank\'>[title]</a>';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -144,7 +165,7 @@ function gsb_feature_business_website_display_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'library/conduct-research/online-resources/business-websites/test/%';
+  $handler->display->display_options['path'] = 'library/conduct-research/online-resources/business-websites/%';
   $export['business_websites_category_detail'] = $view;
 
   return $export;
