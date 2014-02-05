@@ -128,11 +128,10 @@ function gsb_feature_business_website_display_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['text'] = '<a href="[field_link_single]" target=\'_blank\'>[title]</a>';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Contextual filter: Content: Categories (field_bus_website_categories) */
   $handler->display->display_options['arguments']['field_bus_website_categories_tid']['id'] = 'field_bus_website_categories_tid';
   $handler->display->display_options['arguments']['field_bus_website_categories_tid']['table'] = 'field_data_field_bus_website_categories';
