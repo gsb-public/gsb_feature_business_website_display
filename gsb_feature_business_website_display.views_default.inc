@@ -60,9 +60,10 @@ function gsb_feature_business_website_display_views_default_views() {
     'business_website_categories' => 'business_website_categories',
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'library/conduct-research/online-resources/business-websites';
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['pane_category']['name'] = 'Content Panes';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $export['business_website_category_listing'] = $view;
 
   $view = new view();
@@ -87,7 +88,7 @@ function gsb_feature_business_website_display_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Field: Link */
+  /* Field: Field: Title */
   $handler->display->display_options['fields']['field_link_single']['id'] = 'field_link_single';
   $handler->display->display_options['fields']['field_link_single']['table'] = 'field_data_field_link_single';
   $handler->display->display_options['fields']['field_link_single']['field'] = 'field_link_single';
@@ -164,9 +165,20 @@ function gsb_feature_business_website_display_views_default_views() {
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'library/conduct-research/online-resources/business-websites/%';
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['pane_category']['name'] = 'Content panes';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'field_bus_website_categories_tid' => array(
+      'type' => 'panel',
+      'context' => 'entity:field_collection_item.field_cta_action',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Categories (field_bus_website_categories)',
+    ),
+  );
   $export['business_websites_category_detail'] = $view;
 
   return $export;
