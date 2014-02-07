@@ -48,7 +48,7 @@ function gsb_feature_business_website_display_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'library/conduct-research/online-resources/business-websites/[name_1] ';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'library/conduct-research/business-websites/[name_1] ';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
@@ -88,7 +88,7 @@ function gsb_feature_business_website_display_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Field: Title */
+  /* Field: Field: Link */
   $handler->display->display_options['fields']['field_link_single']['id'] = 'field_link_single';
   $handler->display->display_options['fields']['field_link_single']['table'] = 'field_data_field_link_single';
   $handler->display->display_options['fields']['field_link_single']['field'] = 'field_link_single';
