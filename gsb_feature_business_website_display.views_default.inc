@@ -22,7 +22,6 @@ function gsb_feature_business_website_display_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Selected Business Websites';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -78,7 +77,6 @@ function gsb_feature_business_website_display_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = ' Selected Business Websites Category Detail';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -137,8 +135,6 @@ function gsb_feature_business_website_display_views_default_views() {
   $handler->display->display_options['arguments']['field_bus_website_categories_tid']['id'] = 'field_bus_website_categories_tid';
   $handler->display->display_options['arguments']['field_bus_website_categories_tid']['table'] = 'field_data_field_bus_website_categories';
   $handler->display->display_options['arguments']['field_bus_website_categories_tid']['field'] = 'field_bus_website_categories_tid';
-  $handler->display->display_options['arguments']['field_bus_website_categories_tid']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['field_bus_website_categories_tid']['title'] = '%1 Business Websites';
   $handler->display->display_options['arguments']['field_bus_website_categories_tid']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['field_bus_website_categories_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_bus_website_categories_tid']['summary']['format'] = 'default_summary';
