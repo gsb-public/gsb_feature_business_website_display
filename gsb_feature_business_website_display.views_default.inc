@@ -58,6 +58,7 @@ function gsb_feature_business_website_display_views_default_views() {
   $handler->display->display_options['fields']['name_1']['label'] = '';
   $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name_1']['convert_spaces'] = TRUE;
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -171,6 +172,7 @@ function gsb_feature_business_website_display_views_default_views() {
     'business_website_categories' => 'business_website_categories',
   );
   $handler->display->display_options['arguments']['field_bus_website_categories_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_bus_website_categories_tid']['validate_options']['transform'] = TRUE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
