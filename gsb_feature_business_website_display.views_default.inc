@@ -136,19 +136,6 @@ function gsb_feature_business_website_display_views_default_views() {
       ),
     ),
   );
-  /* Field: Field: Description */
-  $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
-  $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
-  $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
-  $handler->display->display_options['fields']['field_description']['label'] = '';
-  $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_description']['settings'] = array(
-    'conditions' => array(
-      0 => array(
-        'condition' => '',
-      ),
-    ),
-  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -158,6 +145,19 @@ function gsb_feature_business_website_display_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['text'] = '<a href="[field_link_single]" target=\'_blank\'>[title]</a>';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['field_bus_website_description']['id'] = 'field_bus_website_description';
+  $handler->display->display_options['fields']['field_bus_website_description']['table'] = 'field_data_field_bus_website_description';
+  $handler->display->display_options['fields']['field_bus_website_description']['field'] = 'field_bus_website_description';
+  $handler->display->display_options['fields']['field_bus_website_description']['label'] = '';
+  $handler->display->display_options['fields']['field_bus_website_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_bus_website_description']['settings'] = array(
+    'conditions' => array(
+      0 => array(
+        'condition' => '',
+      ),
+    ),
+  );
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
