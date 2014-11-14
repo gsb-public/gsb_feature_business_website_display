@@ -92,7 +92,8 @@ function gsb_feature_business_website_display_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
-  $handler->display->display_options['pane_category']['name'] = 'Content Panes';
+  $handler->display->display_options['pane_title'] = 'Business Website Categories';
+  $handler->display->display_options['pane_category']['name'] = 'Non-customizable Content Lists';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $export['business_website_category_listing'] = $view;
 
@@ -195,7 +196,8 @@ function gsb_feature_business_website_display_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
-  $handler->display->display_options['pane_category']['name'] = 'Content panes';
+  $handler->display->display_options['pane_title'] = 'Business Websites';
+  $handler->display->display_options['pane_category']['name'] = 'Non-customizable Content Lists';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
     'field_bus_website_categories_tid' => array(
