@@ -1,20 +1,13 @@
 name = GSB Feature Business Website Display
 core = 7.x
 package = GSB
-version = 7.x-3.0
+version = 3.2
 project = gsb_feature_business_website_display
 dependencies[] = ctools
 dependencies[] = views
 dependencies[] = views_content
-datestamp = 1391812180
+datestamp = 1395822546
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[views_view][] = business_website_category_listing
 features[views_view][] = business_websites_category_detail
-
-
-; Information added by drush on 2014-03-26
-version = "3.2"
-project = "gsb_feature_business_website_display"
-datestamp = "1395822546"
-

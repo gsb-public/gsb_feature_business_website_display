@@ -118,7 +118,7 @@ function gsb_feature_business_website_display_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Field: Title */
+  /* Field: Field: URL */
   $handler->display->display_options['fields']['field_link_single']['id'] = 'field_link_single';
   $handler->display->display_options['fields']['field_link_single']['table'] = 'field_data_field_link_single';
   $handler->display->display_options['fields']['field_link_single']['field'] = 'field_link_single';
